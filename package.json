@@ -1,7 +1,7 @@
 {
   "name": "vue-admin",
   "version": "2.1.0",
-  "description": "A magical vue admin. Typical templates for enterprise applications. Newest development stack of vue. Lots of awesome features",
+  "description": "A magical vue admin template for applications.",
   "author": "",
   "license": "MIT",
   "private": true,
