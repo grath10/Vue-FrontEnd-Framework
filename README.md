@@ -12,10 +12,6 @@ You need to install [node](http://nodejs.org/) and [git](https://git-scm.com/) l
 
  **This project does not support low version browsers (e.g. IE). Please add polyfill yourself if you need them.**
 
- <p align="center">
-  <img width="900" src="https://wpimg.wallstcn.com/a5894c1b-f6af-456e-82df-1151da0839bf.png">
-</p>
-
 ## Features
 ```
 - Login / Logout
