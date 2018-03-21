@@ -1,7 +1,4 @@
 import { param2Obj } from '@/utils'
-// import Vue from 'vue'
-// import Layout from '../views/layout/Layout'
-// const _import = require('../router/_import_' + process.env.NODE_ENV)
 
 const userMap = {
   admin: {
@@ -26,26 +23,6 @@ const userMap = {
   }
 }
 
-/* const Layout = Vue.extend(require('../views/layout/Layout').default)
-const menuMap = {
-  admin: [{
-    path: '/permission',
-    component: Layout,
-    redirect: '/permission/index',
-    meta: { roles: ['admin'] }, // you can set roles in root nav
-    children: [{
-      path: 'index',
-      component: _import('permission/index'),
-      name: 'permission',
-      meta: {
-        title: 'permission',
-        icon: 'lock',
-        roles: ['admin'] // or you can only set roles in sub nav
-      }
-    }]
-  }]
-} */
-
 const userMenuMap = {
   admin: [{
     path: '/permission',
@@ -58,6 +35,20 @@ const userMenuMap = {
       meta: {
         title: 'permission',
         icon: 'lock'
+      }
+    }]
+  }, {
+    path: '/icon',
+    leaf: false,
+    children: [{
+      path: 'index',
+      name: 'icons',
+      leaf: true,
+      directory: 'svg-icons/index',
+      meta: {
+        title: 'icons',
+        icon: 'icon',
+        noCache: true
       }
     }]
   }],
@@ -93,7 +84,6 @@ export default {
   logout: () => 'success',
   getMenu: config => {
     const { roleId } = param2Obj(config.url)
-    // return menuMap[roleId]
     return userMenuMap[roleId]
   }
 }

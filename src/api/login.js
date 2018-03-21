@@ -34,3 +34,11 @@ export function getMenu(roleId) {
     params: { roleId }
   })
 }
+
+export function getFilteredMenu(roleId) {
+  return request({
+    url: '/user/filterMenu',
+    method: 'get',
+    params: { roleId }
+  })
+}

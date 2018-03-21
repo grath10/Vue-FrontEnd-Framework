@@ -1,5 +1,4 @@
 import { asyncRouterMap, constantRouterMap } from '@/router'
-// import { constantRouterMap } from '@/router'
 import { getMenu } from '@/api/login'
 import { generateMenu } from '@/utils/menu'
 import Layout from '../../views/layout/Layout'
@@ -48,16 +47,6 @@ const permission = {
   },
   actions: {
     GenerateRoutes({ commit }, data) {
-      /* const { roles } = data
-      return new Promise((resolve, reject) => {
-        getMenu(roles).then(response => {
-          const accessedRouters = response.data
-          commit('SET_ROUTERS', accessedRouters)
-          resolve(accessedRouters)
-        }).catch(error => {
-          reject(error)
-        })
-      }) */
       return new Promise(resolve => {
         const { roles } = data
         let accessedRouters
